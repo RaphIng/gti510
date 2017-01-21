@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendArt", "CalendArt\CalendArt.csproj", "{E2A37508-68A3-4E3E-AAF6-11196C3F8D5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendArtAPI", "CalendArtAPI\CalendArtAPI.csproj", "{7609788D-6FFE-4CB7-9E92-412F0E97423C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendArtModel", "CalendArtModel\CalendArtModel.csproj", "{4C45E6AD-611C-452D-A0D6-B25029500A0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7609788D-6FFE-4CB7-9E92-412F0E97423C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7609788D-6FFE-4CB7-9E92-412F0E97423C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7609788D-6FFE-4CB7-9E92-412F0E97423C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C45E6AD-611C-452D-A0D6-B25029500A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C45E6AD-611C-452D-A0D6-B25029500A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C45E6AD-611C-452D-A0D6-B25029500A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C45E6AD-611C-452D-A0D6-B25029500A0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
