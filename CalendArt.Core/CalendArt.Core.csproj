@@ -43,6 +43,7 @@
     <Compile Include="Domain\Cours.cs" />
     <Compile Include="Domain\Evenement.cs" />
     <Compile Include="Domain\Tache.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICoursRepository.cs" />
     <Compile Include="Repositories\IRepositary.cs" />
