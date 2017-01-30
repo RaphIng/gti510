@@ -78,8 +78,10 @@ namespace CalendArt.Controllers
         {
             if (ModelState.IsValid)
             {
-                // faire les modifs sur l'objet cours
-                //cours.Sigle = "test"
+                // faire les modifications sur l'objet cours
+                var editedCours = _unitOfWork.Cours.Get(cours.Id);
+                editedCours.Sigle = cours.Sigle;
+                editedCours.Titre = cours.Titre;
                 _unitOfWork.Complete();
                 return RedirectToAction("Index");
             }

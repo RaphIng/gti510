@@ -10,7 +10,7 @@ namespace CalendArt.Infrastructure
         public CalendArtContext()
             : base("name=CalendArtConnectionString")
         {
-            Database.SetInitializer<CalendArtContext>(null);
+            Database.SetInitializer<CalendArtContext>(null); // database first
             //this.Configuration.LazyLoadingEnabled = false;
         }
 
@@ -18,6 +18,7 @@ namespace CalendArt.Infrastructure
         public DbSet<Evenement> Evenements { get; set; }
         public DbSet<Tache> Taches { get; set; }
 
+        //besoin ou pas?
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Database does not pluralize table names
