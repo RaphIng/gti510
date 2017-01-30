@@ -209,6 +209,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CoursController.cs" />
+    <Compile Include="Controllers\EvenementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Core\Domain\Cours.cs" />
@@ -216,12 +217,14 @@
     <Compile Include="Core\Domain\Tache.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Repositories\ICoursRepository.cs" />
+    <Compile Include="Core\Repositories\IEvenementRepository.cs" />
     <Compile Include="Core\Repositories\IRepositary.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\CalendArtContext.cs" />
     <Compile Include="Infrastructure\Repositories\CoursRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\EvenementRepository.cs" />
     <Compile Include="Infrastructure\Repositories\Repository.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -297,6 +300,11 @@
     <Content Include="Views\Cours\Details.cshtml" />
     <Content Include="Views\Cours\Edit.cshtml" />
     <Content Include="Views\Cours\Index.cshtml" />
+    <Content Include="Views\Evenement\Create.cshtml" />
+    <Content Include="Views\Evenement\Delete.cshtml" />
+    <Content Include="Views\Evenement\Details.cshtml" />
+    <Content Include="Views\Evenement\Edit.cshtml" />
+    <Content Include="Views\Evenement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

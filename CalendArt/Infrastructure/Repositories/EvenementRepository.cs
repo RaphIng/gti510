@@ -3,9 +3,9 @@ using CalendArt.Core.Repositories;
 
 namespace CalendArt.Infrastructure.Repositories
 {
-    public class CoursRepository : Repository<Cours>, ICoursRepository
+    public class EvenementRepository : Repository<Evenement>, IEvenementRepository
     {
-        public CoursRepository(CalendArtContext context)
+        public EvenementRepository(CalendArtContext context)
             : base(context)
         {
         }

@@ -18,11 +18,5 @@ namespace CalendArt.Infrastructure
         public DbSet<Evenement> Evenements { get; set; }
         public DbSet<Tache> Taches { get; set; }
 
-        //besoin ou pas?
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            // Database does not pluralize table names
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
     }
 }

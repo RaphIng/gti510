@@ -10,6 +10,7 @@ namespace CalendArt.Core
     public interface IUnitOfWork : IDisposable
     {
         ICoursRepository Cours { get; }
+        IEvenementRepository Evenements { get; }
         // ajouter les autre interfaces repos
         //.
         //.
