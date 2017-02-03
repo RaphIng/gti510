@@ -27,6 +27,7 @@ namespace CalendArt.Controllers
         // GET: Cours/Details/5
         public ActionResult Details(int id)
         {
+            
             Cours cours = _unitOfWork.Cours.Get(id);
             if (cours == null)
             {

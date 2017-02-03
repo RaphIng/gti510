@@ -20,13 +20,11 @@
                 @Html.ActionLink("CalendArt", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("À propos", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <ul class="nav navbar-nav">              
                     <li>@Html.ActionLink("Cours", "Index", "Cours")</li>
                     <li>@Html.ActionLink("Événements", "Index", "Evenement")</li>
                     <li>@Html.ActionLink("Tâches", "Index", "Tache")</li>
+                    <li>@Html.ActionLink("Mes alertes", "Index", "Alert")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

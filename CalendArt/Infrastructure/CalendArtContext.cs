@@ -17,6 +17,7 @@ namespace CalendArt.Infrastructure
         public DbSet<Cours> Cours { get; set; }
         public DbSet<Evenement> Evenements { get; set; }
         public DbSet<Tache> Taches { get; set; }
+        public DbSet<Alert> Alert { get; set; }
 
         //besoin ou pas?
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

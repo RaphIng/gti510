@@ -14,12 +14,14 @@ namespace CalendArt.Infrastructure
         private readonly CalendArtContext _context;
 
         public ICoursRepository Cours { get; private set; }
+        public IAlertRepository Alert { get; private set; }
         // ajouter autres
 
         public UnitOfWork(CalendArtContext context)
         {
             _context = context;
             Cours = new CoursRepository(_context);
+            Alert = new AlertRepository(_context);
         }
 
         public int Complete()
