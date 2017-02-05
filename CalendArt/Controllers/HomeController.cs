@@ -7,6 +7,8 @@ using CalendArt.Infrastructure;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using Google.Apis;
+using Google.Apis.Calendar;
 
 namespace CalendArt.Controllers
 {
