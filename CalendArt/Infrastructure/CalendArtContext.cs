@@ -16,7 +16,12 @@ namespace CalendArt.Infrastructure
 
         public DbSet<Cours> Cours { get; set; }
         public DbSet<Evenement> Evenements { get; set; }
-        public DbSet<Tache> Taches { get; set; }
+        public DbSet<Tache> Tache { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
 
     }
 }

@@ -21,16 +21,12 @@ namespace CalendArt.Controllers
         // GET: Evenements
         public ActionResult Index()
         {
-            try
-            {
-                var evenements = _unitOfWork.Evenements.GetAll();
-                return View(evenements);
-            } catch (NullReferenceException ex)
+            var evenements = _unitOfWork.Evenements.GetAll();
+            if (evenements == null)
             {
                 ViewBag.Message = "Vous n'avez aucun événement.";
-                Debug.WriteLine(ex.ToString());
-                return View();
             }
+            return View(evenements);
         }
 
         // GET: Evenements/Details/5

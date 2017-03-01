@@ -1,14 +1,14 @@
 ﻿@model CalendArt.Core.Domain.Evenement
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Supprimer l'événement";
 }
 
-<h2>Delete</h2>
+<h2>Supprimer l'événement</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Êtes-vous sûr de vouloir supprimer cet événement?</h3>
 <div>
-    <h4>Evenement</h4>
+    <h4>Événement</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DateHeure)
+            Date et heure
         </dt>
 
         <dd>
@@ -42,7 +42,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Retour", "Index")
         </div>
     }
 </div>
