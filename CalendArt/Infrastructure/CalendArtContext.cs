@@ -19,11 +19,10 @@ namespace CalendArt.Infrastructure
         public DbSet<Tache> Taches { get; set; }
         public DbSet<Alert> Alert { get; set; }
 
-        //besoin ou pas?
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            // Database does not pluralize table names
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
     }
 }

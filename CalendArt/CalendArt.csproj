@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CalendArt</RootNamespace>
     <AssemblyName>CalendArt</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -23,7 +23,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>f7cf2851</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -145,9 +146,9 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -259,6 +260,7 @@
     <Compile Include="Controllers\AlertController.cs" />
     <Compile Include="Controllers\CalendarEventController.cs" />
     <Compile Include="Controllers\CoursController.cs" />
+    <Compile Include="Controllers\EvenementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Core\Domain\Alert.cs" />
@@ -270,7 +272,8 @@
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Repositories\ICoursRepository.cs" />
     <Compile Include="Core\Repositories\IAlertRepository.cs" />
-    <Compile Include="Core\IRepositary.cs" />
+    <Compile Include="Core\Repositories\IEvenementRepository.cs" />
+    <Compile Include="Core\Repositories\IRepositary.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -278,11 +281,13 @@
     <Compile Include="Infrastructure\CalendArtContext.cs" />
     <Compile Include="Infrastructure\Repositories\AlertRepository.cs" />
     <Compile Include="Infrastructure\Repositories\CoursRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\EvenementRepository.cs" />
     <Compile Include="Infrastructure\Repositories\Repository.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AlertViewModel.cs" />
     <Compile Include="Models\CoursViewModel.cs" />
+    <Compile Include="Models\EvenementViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -356,6 +361,11 @@
     <Content Include="Views\Cours\Index.cshtml" />
     <Content Include="Views\Alert\Index.cshtml" />
     <Content Include="Views\Alert\Create.cshtml" />
+	<Content Include="Views\Evenement\Create.cshtml" />
+    <Content Include="Views\Evenement\Delete.cshtml" />
+    <Content Include="Views\Evenement\Details.cshtml" />
+    <Content Include="Views\Evenement\Edit.cshtml" />
+    <Content Include="Views\Evenement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\CalendarEvent\" />
