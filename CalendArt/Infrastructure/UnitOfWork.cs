@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CalendArt.Core;
+﻿using CalendArt.Core;
 using CalendArt.Core.Repositories;
 using CalendArt.Infrastructure.Repositories;
 
@@ -13,17 +8,18 @@ namespace CalendArt.Infrastructure
     {
         private readonly CalendArtContext _context;
 
-        public ICoursRepository Cours { get; private set; }
-        public IEvenementRepository Evenements { get; private set; }
-		public IAlertRepository Alert { get; private set; }
-        // ajouter autres
+        public ICourseRepository Courses { get; private set; }
+        public IEventRepository Events { get; private set; }
+		public IReminderRepository Reminders { get; private set; }
+        public ITaskRepository Tasks { get; private set; }
 
         public UnitOfWork(CalendArtContext context)
         {
             _context = context;
-            Cours = new CoursRepository(_context);
-			Evenements = new EvenementRepository(_context);
-            Alert = new AlertRepository(_context);            
+            Courses = new CourseRepository(_context);
+			Events = new EventRepository(_context);
+            Reminders = new ReminderRepository(_context);
+            Tasks = new TaskRepository(_context);
         }
 
         public int Complete()

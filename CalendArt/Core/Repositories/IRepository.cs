@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace CalendArt.Core.Repositories
 {
-    // interface pour repository pattern
+    // Interface for repository pattern
     public interface IRepository<TEntity> where TEntity : class
     {
         TEntity Get(int id);

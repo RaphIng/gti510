@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using CalendArt.Core.Domain;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Data.SQLite;
 
 namespace CalendArt.Infrastructure
 {
@@ -14,14 +13,14 @@ namespace CalendArt.Infrastructure
             //this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<Cours> Cours { get; set; }
-        public DbSet<Evenement> Evenements { get; set; }
-        public DbSet<Tache> Taches { get; set; }
-        public DbSet<Alert> Alert { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Reminder> Reminders { get; set; }
+        public DbSet<Task> Tasks { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
     }

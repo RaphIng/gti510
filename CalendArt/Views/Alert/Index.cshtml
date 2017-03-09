@@ -1,24 +1,24 @@
-﻿@model IEnumerable<CalendArt.Core.Domain.Alert>
+﻿@model IEnumerable<CalendArt.Core.Domain.Reminder>
 
 @{
-    ViewBag.Title = "Mes alertes";
+    ViewBag.Title = "Mes rappels";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New Alert", "Create")
+    @Html.ActionLink("Créer une nouvelle alerte", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Debut)
+            @Html.DisplayNameFor(model => model.TimeBeforeEvent)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Fin)
+            @Html.DisplayNameFor(model => model.EventId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Rappel)
+            @Html.DisplayNameFor(model => model.ReminderTypeId)
         </th>
         <th></th>
     </tr>
@@ -26,18 +26,18 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Debut)
+            @Html.DisplayFor(modelItem => item.TimeBeforeEvent)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Fin)
+            @Html.DisplayFor(modelItem => item.EventId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Rappel)
+            @Html.DisplayFor(modelItem => item.ReminderTypeId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReminderId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReminderId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReminderId })
         </td>
     </tr>
 }
