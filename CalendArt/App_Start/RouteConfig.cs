@@ -12,19 +12,19 @@ namespace CalendArt
             routes.MapRoute(
                 name: "Courses", // Route name
                 url: "courses/{action}/{id}", // URL with parameters
-                defaults: new { controller = "CourseController", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                defaults: new { controller = "Course", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
             routes.MapRoute(
                 name: "Events", // Route name
                 url: "events/{action}/{id}", // URL with parameters
-                defaults: new { controller = "EventController", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                defaults: new { controller = "Event", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
             routes.MapRoute(
                 name: "Reminders", // Route name
                 url: "reminders/{action}/{id}", // URL with parameters
-                defaults: new { controller = "ReminderController", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                defaults: new { controller = "Reminder", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
             routes.MapRoute(
