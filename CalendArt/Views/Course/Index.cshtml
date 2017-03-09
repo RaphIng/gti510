@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CalendArt.Core.Domain.Course>
+
+@{
+    ViewBag.Title = "Mes cours";
+}
+
+<h2>Mes cours</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un cours", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id=item.CourseId }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.CourseId }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.CourseId })
+        </td>
+    </tr>
+}
+
+</table>
