@@ -49,6 +49,9 @@ build/
 # Visual Studio 2015 cache/options directory
 .vs/
 
+#NuGet
+packages/
+
 # Visual C++ cache files
 ipch/
 *.aps
