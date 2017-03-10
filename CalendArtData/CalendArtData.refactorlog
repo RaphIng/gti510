@@ -35,4 +35,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="TaskId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e26cc7bd-f00b-4835-a754-201d5690dedb" ChangeDateTime="03/10/2017 01:16:36">
+    <Property Name="ElementName" Value="[dbo].[Reminder].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Reminder]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ReminderId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4439b972-eb09-4f17-bf7b-f7bc624ff283" ChangeDateTime="03/10/2017 01:19:14">
+    <Property Name="ElementName" Value="[dbo].[Reminder].[TimeBeforeEvent]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Reminder]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Minutes" />
+  </Operation>
 </Operations>

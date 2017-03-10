@@ -101,7 +101,7 @@ namespace CalendArt.Controllers
 
         //
         // POST: /Reminder/Delete/5
-        [HttpPost, ActionName("Alert")]
+        [HttpPost, ActionName("Reminder")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
