@@ -288,6 +288,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="App_Data\CalendArtDB.sqlite" />
+    <Content Include="App_Data\client_secret.json" />
     <None Include="Properties\PublishProfiles\CalendArt20170309101052 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
