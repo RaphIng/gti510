@@ -5,5 +5,6 @@
     [Description] NVARCHAR(250) NULL, 
     [StartDateTime] DATETIME2 NOT NULL, 
     [EndDateTime] DATETIME2 NOT NULL, 
-    [OwnerId] NCHAR(10) NULL
+    [OwnerId] NCHAR(10) NULL, 
+    [IsAllDay] BIT NOT NULL
 )

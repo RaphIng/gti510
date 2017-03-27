@@ -1,5 +1,9 @@
-﻿@{
+﻿@using Newtonsoft.Json
+
+@{
     ViewBag.Title = "Home Page";
+  //  var _courses = (ViewBag.Courses as List<CalendArt.Core.Domain.Course>);
+    
 }
 
 <div class="jumbotron">
@@ -10,3 +14,70 @@
 
 <div class="row">
 </div>
+
+
+<div id='calendar'></div>
+<script src="~/Scripts/Home/Index.js"></script>
+
+<script>
+
+    $('#calendar').fullCalendar({
+    });
+
+     /*Course*/
+    var courses = @Html.Raw(
+        Json.Encode(
+            ((List<CalendArt.Core.Domain.Course>)ViewBag.Courses).Select(course => new
+            {
+                Id = course.CourseId,
+                Code = course.Code,
+                Title = course.Title,
+
+
+                Dates = course.Dates.Select(e=> e.ToString())
+            })
+        )
+    );
+   
+    for (i = 0; i < courses.length; i++) {
+        for (j = 0; j < courses[i].Dates.length; j++) {
+            var _event = { title: courses[i].Title, start: courses[i].Dates[j] };
+            $("#calendar").fullCalendar('renderEvent', _event, true);
+        }
+    }
+    /**/
+
+
+
+     /*Event*/
+    var events = @Html.Raw(
+        Json.Encode(
+            ((List<CalendArt.Core.Domain.Event>)ViewBag.Events).Select(events => new
+            {
+                Id = events.EventId,
+                StartDateTime = events.StartDateTime,
+                EndDateTime = events.EndDateTime,
+                Title = events.Title,
+                Location = events.Location,
+            })
+        )
+    );
+   
+    
+    for (i = 0; i < events.length; i++) {
+        var _startDate = new Date(parseInt(events[i].StartDateTime.substr(6)));
+        var _startDate = _startDate.getFullYear() + "-" + ("0" + (_startDate.getMonth() + 1)).slice(-2) + "-" + ("0" + _startDate.getDate()).slice(-2);
+      
+        var _endDate = new Date(parseInt(events[i].EndDateTime.substr(6)));
+        var _endDate = _endDate.getFullYear() + "-" + ("0" + (_endDate.getMonth() + 1)).slice(-2)  + "-" + ("0" + _endDate.getDate()).slice(-2);
+       
+
+        var _event = { title: events[i].Title, start: _startDate, end: _endDate};
+
+        $("#calendar").fullCalendar('renderEvent', _event, true);
+    }
+    /**/
+
+
+
+</script>

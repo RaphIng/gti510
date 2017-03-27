@@ -1,9 +1,13 @@
-﻿namespace CalendArt.Core.Domain
+﻿using System;
+using System.Collections.Generic;
+
+namespace CalendArt.Core.Domain
 {
     public class Course
     {
         public int CourseId { get; set; }
         public string Code { get; set; }
         public string Title { get; set; }
+        public List<DateTime?> Dates { get; set; }
     }
 }

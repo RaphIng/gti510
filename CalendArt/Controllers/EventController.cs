@@ -41,7 +41,7 @@ namespace CalendArt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventId,Title,StartDateTime,EndDateTime,Location")] Event @event)
+        public ActionResult Create([Bind(Include = "EventId,Title,StartDateTime,EndDateTime,Location,IsAllDay")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace CalendArt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventId,Title,StartDateTime,EndDateTime,Location")] Event @event)
+        public ActionResult Edit([Bind(Include = "EventId,Title,StartDateTime,EndDateTime,Location,IsAllDay")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -79,6 +79,7 @@ namespace CalendArt.Controllers
                 editedEvenement.StartDateTime = @event.StartDateTime;
                 editedEvenement.EndDateTime = @event.EndDateTime;
                 editedEvenement.Location = @event.Location;
+                editedEvenement.IsAllDay = @event.IsAllDay;
                 _unitOfWork.Complete();
                 return RedirectToAction("Index");
             }

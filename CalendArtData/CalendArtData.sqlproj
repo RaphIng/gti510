@@ -62,7 +62,6 @@
     <Build Include="Course.sql" />
     <Build Include="Event.sql" />
     <Build Include="Task.sql" />
-    <Build Include="Reminder.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="CalendArtData.refactorlog" />
